@@ -12,16 +12,16 @@ import static org.junit.Assert.*;
 
 @RunWith(value = Parameterized.class)
 public class FibonnacciTest {
-    private int postion;
+    private int position;
     private int expected;
 
-    public FibonnacciTest(int postion, int expected) {
-        this.postion = postion;
+    public FibonnacciTest(int position, int expected) {
+        this.position = position;
         this.expected = expected;
     }
 
     @Parameterized.Parameters
-    public static Collection<Object[]> data(){
+    public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
                 {0, 0},
                 {1, 1},
@@ -37,7 +37,7 @@ public class FibonnacciTest {
         Fibonnacci fibonnacci = new Fibonnacci();
 
         // when
-        int result = fibonnacci.display(postion);
+        int result = fibonnacci.display(position);
 
         // then
         assertThat(result, is(expected));
